@@ -1,5 +1,7 @@
 package com.proyecto.web.venta.config;
 
+import org.keycloak.adapters.KeycloakConfigResolver;
+import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.modelmapper.ModelMapper;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -19,4 +21,9 @@ public class ConfigModelMapper {
     public RestTemplate restTemplate() {
     	return new RestTemplate();
     }
+    
+	@Bean
+	public KeycloakConfigResolver keycloakConfigResolver() {
+		return new KeycloakSpringBootConfigResolver();
+	}
 }

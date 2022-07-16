@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: master
+          default-label: keycloak
           uri: https://github.com/PieroCahuanaPalomino/RegistroCompraVentas.git
           search-paths: config-data
   application:

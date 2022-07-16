@@ -5,6 +5,12 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -128,13 +134,16 @@ public class ClienteService {
 
 	
 	public STecnico returnSTecnico(int idSoporte) {
-		STecnico sTecnico=restTemplate.getForObject("http://tecnico-service/soporte_tecnico/"+idSoporte,STecnico.class);
+		STecnico sTecnico=clients.buscar(idSoporte);
 		return sTecnico;
 	}
 	
-	public List<STecnico> getSTecnico(){
-		List<STecnico> sTecnicos=restTemplate.getForObject("http://tecnico-service/soporte_tecnico",List.class);
-		return sTecnicos;
+	public List getSTecnico(){
+		Jwt jwt = (Jwt) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.add("Authorization", "Bearer " + jwt.getTokenValue());
+		ResponseEntity<List> sTecnicos=restTemplate.exchange("http://tecnico-service/soporte_tecnico",HttpMethod.GET,new HttpEntity<>(httpHeaders),List.class);
+		return sTecnicos.getBody();
 	}
 	
 	

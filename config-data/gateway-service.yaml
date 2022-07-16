@@ -12,6 +12,8 @@ eureka:
 spring:
   cloud:
     gateway:
+      default-filters:
+        - TokenRelay
       discovery:
         locator:
           enabled: true
@@ -34,3 +36,19 @@ spring:
           uri: lb://producto-service
           predicates:
             - Path=/producto/**,/categoria/**
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            authorization-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/auth 
+            userinfo-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+            token-uri: http://localhost:8180/realms/tutorial-realm/protocol/openid-connect/token
+        registration:
+          tutorial-client:
+            provider: keycloak
+            client-id: tutorial-client
+            client-secret: hDAqvFDcjji2Ikw4lqbwu2JHrdrvMPhk
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/tutorial-client"

@@ -2,6 +2,7 @@ package com.proyect.web.product.controller;
 
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
 import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
@@ -54,6 +55,7 @@ public class ProductoController {
 	
 	
 	//se enviaran por el DTO todos los datos
+	@RolesAllowed("backend-user")
 	@GetMapping()
 	public ResponseEntity <List<ProductoDto>> listar(){
 		List<ProductoDto> productosDto=productoService.listaProducto();

@@ -1,4 +1,4 @@
-package com.proyecto.web.venta.security;
+package com.proyect.web.product.security;
 
 import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
@@ -16,8 +16,7 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class KeycloakConfig extends KeycloakWebSecurityConfigurerAdapter {
-	
+public class ProductoConfig extends KeycloakWebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         KeycloakAuthenticationProvider provider = new KeycloakAuthenticationProvider();

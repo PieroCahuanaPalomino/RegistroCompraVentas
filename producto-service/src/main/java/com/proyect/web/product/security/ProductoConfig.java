@@ -28,7 +28,7 @@ public class ProductoConfig extends KeycloakWebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().anyRequest().authenticated()
                 .and()
-                .oauth2ResourceServer().jwt();
+                .oauth2ResourceServer().jwt();http.cors();
     }
 
     @Bean

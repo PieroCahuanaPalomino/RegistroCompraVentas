@@ -15,8 +15,8 @@ spring:
       globalcors:
         corsConfigartions:
           '[/**]':
-            allowedOrigins: "https://localhost:4200"
-           allowMethods:
+           allowedOrigins: "https://localhost:4200"
+           allowedMethods:
            - GET
       default-filters:
         - TokenRelay

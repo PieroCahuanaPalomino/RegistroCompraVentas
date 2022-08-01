@@ -18,4 +18,5 @@ public class ConfigModelMapper {
 	public KeycloakConfigResolver keycloakConfigResolver() {
 		return new KeycloakSpringBootConfigResolver();
 	}
+	
 }

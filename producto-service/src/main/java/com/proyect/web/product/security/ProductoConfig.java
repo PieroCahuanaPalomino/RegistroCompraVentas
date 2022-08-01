@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableGlobalMethodSecurity(jsr250Enabled = true)
 public class ProductoConfig extends KeycloakWebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -24,11 +24,22 @@ public class ProductoConfig extends KeycloakWebSecurityConfigurerAdapter {
         auth.authenticationProvider(provider);
     }
 
+    /*
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().anyRequest().authenticated()
                 .and()
                 .oauth2ResourceServer().jwt();http.cors();
+    }
+    */
+    @Override
+    protected void configure(HttpSecurity http) throws Exception
+    {
+        super.configure(http);
+        http
+                .authorizeRequests()
+                .anyRequest().permitAll();
+        http.csrf().disable();
     }
 
     @Bean

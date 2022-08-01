@@ -1,6 +1,0 @@
-cors:
-  Access-Control-Allow-Origin: ${localhost:4200}
-  Access-Control-Allow-Methods: 'DELETE, GET, OPTIONS, PATCH, POST, PUT'
-  Access-Control-Max-Age: '3600'
-  Access-Control-Allow-Headers: 'x-requested-with, accion , authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN'
-  Access-Control-Allow-Credentials: 'true'

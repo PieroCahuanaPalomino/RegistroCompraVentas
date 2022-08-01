@@ -24,14 +24,16 @@ public class ProductoConfig extends KeycloakWebSecurityConfigurerAdapter {
         auth.authenticationProvider(provider);
     }
 
-    /*
+    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().anyRequest().authenticated()
                 .and()
                 .oauth2ResourceServer().jwt();http.cors();
     }
-    */
+    
+    
+    /*
     @Override
     protected void configure(HttpSecurity http) throws Exception
     {
@@ -41,7 +43,7 @@ public class ProductoConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .anyRequest().permitAll();
         http.csrf().disable();
     }
-
+*/
     @Bean
 	@Override
 	protected SessionAuthenticationStrategy sessionAuthenticationStrategy() {

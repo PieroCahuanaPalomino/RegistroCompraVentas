@@ -12,6 +12,12 @@ eureka:
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigartions:
+          '[/**]':
+            allowedOrigins: "https://localhost:4200"
+           allowMethods:
+           - GET
       default-filters:
         - TokenRelay
       discovery:

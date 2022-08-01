@@ -32,7 +32,6 @@ public class ProductoConfig extends KeycloakWebSecurityConfigurerAdapter {
                 .oauth2ResourceServer().jwt();http.cors();
     }
     
-    
     /*
     @Override
     protected void configure(HttpSecurity http) throws Exception

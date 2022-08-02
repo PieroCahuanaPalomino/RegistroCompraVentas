@@ -7,15 +7,4 @@ cors:
   Access-Control-Allow-Headers: 'x-requested-with, accion , authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN'
   Access-Control-Allow-Credentials: 'true'  
 
-spring:
-  cloud:
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "https://localhost:4200"
-            allowedHeaders:
-              - content-type
-            allowedMethods:
-              - GET
-              - POST
+

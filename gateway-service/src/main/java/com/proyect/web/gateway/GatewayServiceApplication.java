@@ -14,7 +14,7 @@ public class GatewayServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GatewayServiceApplication.class, args);
 	}
-
+/*
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
@@ -23,5 +23,5 @@ public class GatewayServiceApplication {
 				registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("*").allowedHeaders("*");
 			}
 		};
-	}
+	}*/
 }

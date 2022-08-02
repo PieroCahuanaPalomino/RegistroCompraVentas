@@ -33,7 +33,7 @@ import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 import reactor.core.publisher.Mono;
-
+/*
 @Configuration
 public class CORS {
 
@@ -62,4 +62,4 @@ public class CORS {
 	            return chain.filter(ctx);
 	        };
 	    }
-}
+}*/

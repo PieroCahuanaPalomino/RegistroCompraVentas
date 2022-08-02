@@ -1,8 +1,9 @@
-host: 
-  front-end: http://localhost:4200
-cors:
-  Access-Control-Allow-Origin: ${host.front-end}
-  Access-Control-Allow-Methods: 'DELETE, GET, OPTIONS, PATCH, POST, PUT'
-  Access-Control-Max-Age: '3600'
-  Access-Control-Allow-Headers: 'x-requested-with, accion , authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN'
-  Access-Control-Allow-Credentials: 'true'
+
+#host: 
+ # front-end: http://localhost:4200
+#cors:
+#  Access-Control-Allow-Origin: ${host.front-end}
+#  Access-Control-Allow-Methods: 'DELETE, GET, OPTIONS, PATCH, POST, PUT'
+#  Access-Control-Max-Age: '3600'
+#  Access-Control-Allow-Headers: 'x-requested-with, accion , authorization, Content-Type, Authorization, credential, X-XSRF-TOKEN'
+#  Access-Control-Allow-Credentials: 'true'

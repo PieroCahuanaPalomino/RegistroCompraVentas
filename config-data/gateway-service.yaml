@@ -12,12 +12,6 @@ eureka:
 spring:
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations: 
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-            - GET
       default-filters:
         - TokenRelay
       discovery:

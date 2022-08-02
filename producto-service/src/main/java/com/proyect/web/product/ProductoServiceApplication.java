@@ -15,7 +15,7 @@ public class ProductoServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProductoServiceApplication.class, args);
 	}
-	
+	/*
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
@@ -24,6 +24,6 @@ public class ProductoServiceApplication {
 				registry.addMapping("/**").allowedOrigins("http://localhost:4200").allowedMethods("*").allowedHeaders("*");
 			}
 		};
-	}
+	}*/
 
 }

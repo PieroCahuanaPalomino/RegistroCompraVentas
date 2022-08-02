@@ -59,7 +59,7 @@ public class ProductoController {
 	
 	//se enviaran por el DTO todos los datos
 	@GetMapping("/listarProductos")
-	@RolesAllowed("backend-admin")
+	//@RolesAllowed("backend-admin")
 	public ResponseEntity <List<ProductoDto>> listar(){
 		List<ProductoDto> productosDto=productoService.listaProducto();
 		if(productosDto.isEmpty()) {return ResponseEntity.noContent().build();}

@@ -27,7 +27,6 @@ import com.proyect.web.product.service.ProductoService;
 
 @RestController
 @RequestMapping("/producto")
-@CrossOrigin
 public class ProductoController {
 
 	
@@ -58,7 +57,7 @@ public class ProductoController {
 	
 	
 	//se enviaran por el DTO todos los datos
-	@GetMapping()
+	@GetMapping("listarProductos")
 	@RolesAllowed("backend-admin")
 	public ResponseEntity <List<ProductoDto>> listar(){
 		List<ProductoDto> productosDto=productoService.listaProducto();

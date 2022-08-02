@@ -13,7 +13,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "https://www.javarubberduck.com"
+            allowedOrigins: "https://localhost:4200"
             allowedHeaders:
               - content-type
             allowedMethods:

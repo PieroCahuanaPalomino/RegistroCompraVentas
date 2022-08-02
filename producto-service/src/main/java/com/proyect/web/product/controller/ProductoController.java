@@ -27,6 +27,7 @@ import com.proyect.web.product.service.ProductoService;
 
 @RestController
 @RequestMapping("/producto")
+@CrossOrigin
 public class ProductoController {
 
 	

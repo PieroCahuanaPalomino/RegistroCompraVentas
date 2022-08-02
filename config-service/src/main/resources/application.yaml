@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: zip
+          default-label: cors
           uri: https://github.com/PieroCahuanaPalomino/RegistroCompraVentas.git
           search-paths: config-data
   application:

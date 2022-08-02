@@ -57,7 +57,7 @@ public class ProductoController {
 	
 	
 	//se enviaran por el DTO todos los datos
-	@GetMapping("listarProductos")
+	@GetMapping("/listarProductos")
 	@RolesAllowed("backend-admin")
 	public ResponseEntity <List<ProductoDto>> listar(){
 		List<ProductoDto> productosDto=productoService.listaProducto();
